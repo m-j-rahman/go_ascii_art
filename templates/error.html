@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Error</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Hubballi&display=swap" rel="stylesheet">
+
+
+    <script src="https://kit.fontawesome.com/5c5dbe00ab.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="err">
+            <h1>Something went wrong...</h1>
+            <i class="fa-solid fa-face-sad-cry"></i>
+
+            <h2 class="err__msg">{{.Str}}</h2>
+        </div>
+
+        <div class="return">
+            <p>Go Back</p>
+            <a href="/"><i class="fa-solid fa-arrow-left-long"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ascii-web</title>
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Hubballi&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="userInput">
+            <div class="left">
+                <h1>Ascii Art Web</h1>
+            </div>
+            <div class="tabset">
+
+
+                    <input type="radio" name="tabset" id="tab1" checked>
+                    <label for="tab1">Display</label>
+                    <input type="radio" name="tabset" id="tab2" checked>
+                    <label for="tab2">Export</label>
+               
+
+                <div class="right tab-panels">
+                    <section id="display" class="tab-panel">
+                        <form action="/ascii-art" method="POST">
+                            <label class="label"for="banner">Choose banner</label>
+                            <select class="select" name="banner" id="banner">
+                                <optgroup label="Banners">
+                                    <option value="standard">Standard</option>
+                                    <option value="shadow">Shadow</option>
+                                    <option value="thinkertoy">Thinkertoy</option>
+                                </optgroup>
+                             
+                            </select>
+                            <textarea name="userText" cols="75" rows="5" placeholder="Message to display"></textarea>
+                            <input class="btn" type="submit" value="Display">
+                        </form>
+                    </section>
+
+                    <section id="export" class="tab-panel">
+                        <form action="/export" method="POST">
+                            <label class="label"for="banner">Choose banner</label>
+                            <select class="select" name="banner" id="banner">
+                                <optgroup label="Banners">
+                                    <option value="standard">Standard</option>
+                                    <option value="shadow">Shadow</option>
+                                    <option value="thinkertoy">Thinkertoy</option>
+                                </optgroup>
+                            </select>
+                            <textarea name="userText" cols="75" rows="5" placeholder="Message to export"></textarea>
+                            <input class="btn" type="submit" value="Export">
+                        </form>
+                    </section>
+                </div>
+                
+            </div>
+            
+        </div>
+        <pre>{{.Output}}</pre>
+    </div>
+</body>
+</html>
